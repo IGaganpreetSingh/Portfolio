@@ -11,23 +11,23 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Gaganpreet Singh - AI Lead at Codebrew Labs",
+  title: "Gaganpreet Singh - AI/ML Developer",
   description:
-    "Portfolio of Gaganpreet Singh, AI Lead specializing in artificial intelligence and machine learning solutions",
+    "AI/ML Developer specializing in Generative AI applications and cloud technologies",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={geist.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          enableSystem={true}
+          defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
           <div className="relative min-h-screen overflow-hidden">
