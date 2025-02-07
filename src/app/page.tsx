@@ -1,12 +1,5 @@
 import Image from "next/image";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  FileText,
-  Globe,
-  BookOpen,
-} from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Home() {
   return (
@@ -17,7 +10,7 @@ export default function Home() {
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
             <div className="flex-1">
               <h1 className="text-4xl sm:text-5xl font-bold mb-4 animate-slide-in-right animate-gradient-text">
-                Hi, I'm Gaganpreet Singh
+                Hi, I&apos;m Gaganpreet Singh
               </h1>
               <h2
                 className="text-2xl sm:text-3xl text-foreground/80 mb-6 animate-slide-in-right"
@@ -88,7 +81,7 @@ export default function Home() {
             </p>
             <p>
               My expertise spans across AI/ML, Python Programming, LangChain
-              Framework, and Generative AI Applications. I'm particularly
+              Framework, and Generative AI Applications. I&apos;m particularly
               passionate about creating AI-driven solutions that solve
               real-world problems.
             </p>
@@ -134,8 +127,8 @@ export default function Home() {
                   using Python, OpenAI, LangChain, and FAISS
                 </li>
                 <li>
-                  Built "BTB Buddy" Telegram bot using OpenAI's ChatGPT API and
-                  aiogram
+                  Built &quot;BTB Buddy&quot; Telegram bot using OpenAI&apos;s
+                  ChatGPT API and aiogram
                 </li>
               </ul>
             </div>
@@ -268,7 +261,7 @@ export default function Home() {
                 Ingeni Health AI Assistant
               </h3>
               <p className="text-foreground/80 mb-4">
-                Developed voice-activated AI system for seniors' healthcare
+                Developed voice-activated AI system for seniors&apos; healthcare
                 management. Implemented comprehensive solutions including health
                 monitoring, automated communications, and proactive care
                 features using AI and IoT technologies.
