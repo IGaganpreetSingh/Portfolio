@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
 
@@ -71,6 +71,16 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
+            <a
+              href="https://drive.google.com/uc?export=download&id=14J569gUmF9vj3HDI7ou2UAApHAmLTs1K"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-1 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 hover-lift animate-fade-in"
+              style={{ animationDelay: "0.6s" }}
+            >
+              <Download className="w-4 h-4" />
+              <span>CV</span>
+            </a>
             <ThemeToggle />
           </div>
 
@@ -105,6 +115,16 @@ const Navbar = () => {
                   {link.label}
                 </button>
               ))}
+              <a
+                href="https://drive.google.com/uc?export=download&id=14J569gUmF9vj3HDI7ou2UAApHAmLTs1K"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-1 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 w-fit animate-slide-in-right"
+                style={{ animationDelay: "0.6s" }}
+              >
+                <Download className="w-4 h-4" />
+                <span>Download CV</span>
+              </a>
             </div>
           </div>
         )}
