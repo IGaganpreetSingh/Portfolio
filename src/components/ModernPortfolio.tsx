@@ -5,6 +5,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import {
   Github,
   Linkedin,
@@ -23,7 +24,6 @@ import {
 
 // Modern portfolio component with enhanced design and animations
 const ModernPortfolio = () => {
-  const [scrollY, setScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState("hero"); // Default to 'hero'
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -53,8 +53,6 @@ const ModernPortfolio = () => {
   // Handle scroll for parallax effects and active section detection
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
-
       // Update active section based on scroll position
       const sections = [
         "hero",
@@ -531,7 +529,7 @@ const ModernPortfolio = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
               >
-                <span>Hi, I'm </span>
+                <span>Hi, I&apos;m </span>
                 {/* Use text-primary for the name color */}
                 <span className="text-primary">Gaganpreet Singh</span>
               </motion.h1>
@@ -661,10 +659,13 @@ const ModernPortfolio = () => {
                 >
                   {/* Use primary/accent for image background gradient */}
                   <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
-                    <img
+                    <Image
                       src="/profile.png"
                       alt="Gaganpreet Singh"
+                      width={320}
+                      height={320}
                       className="w-full h-full object-cover object-center"
+                      priority
                     />
                   </div>
                 </motion.div>
