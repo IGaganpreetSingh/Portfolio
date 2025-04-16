@@ -12,18 +12,21 @@ const Navbar = () => {
     { id: "about", label: "About", delay: "0.1s" },
     { id: "experience", label: "Experience", delay: "0.2s" },
     { id: "skills", label: "Skills", delay: "0.3s" },
-    { id: "projects", label: "Projects", delay: "0.4s" },
-    { id: "contact", label: "Contact", delay: "0.5s" },
+    { id: "contact", label: "Contact", delay: "0.4s" },
   ];
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       const navbarHeight = 64; // height of navbar
+
+      // Get the element's position relative to the viewport
       const elementPosition = element.getBoundingClientRect().top;
+      // Calculate position accounting for scroll and navbar height
       const offsetPosition =
         elementPosition + window.pageYOffset - navbarHeight;
 
+      // Use scrollTo instead of scrollIntoView for better control
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
